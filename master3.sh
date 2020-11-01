@@ -2,12 +2,22 @@
 
 # Shell qui liste tous les dossiers du répertoire de la partie4
 
-liste_dossiers=`ls /home/student/Desktop/lab4`
+# Shell qui renvoie un msg d'erreur si répertoire invalide
 
-for i in $liste_dossiers
-	if [ -d $i ]
-	then
-		echo "Dossier trouvé: $i"
-	else
-		echo "Dossier non trouvé"
-	fi
+read -p 'Entrez un répertoire : ' repertoire
+
+if [ -d $repertoire ]
+then
+	echo "Le chemin est un répertoire valide"
+else
+	echo "Veuillez choisir un répertoire valide"
+fi
+
+
+# Shell qui précise en paramètre le répertoire que l'on souhaite lister
+
+liste=`ls $repertoire`
+for i in $liste
+do
+	echo "Répertoire trouvé: $i"
+done

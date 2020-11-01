@@ -1,9 +1,9 @@
 #Création du fichier script "vim master.sh"
-#Indication du nom du shell ci-dessous
+#Indication du nom du shell utilisé ci-dessous
 #!/bin/bash
 pwd
 # Affichage de la liste des fichiers de la partie4 ci-dessous
-ls /home/student/Desktop/lab4
+ls /home/student/Desktop/lab4/5AS05-partie4
 # Exécution du script bash avec ":wq"
 # Vérification du droit d'accès avec la commande "ls -l"
 # Donner le droit d'exécuter avec la commande "chmod +x master.sh
