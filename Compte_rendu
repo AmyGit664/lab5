@@ -1,0 +1,32 @@
+/********************************* lab5: Shell - Script ********************************/
+/****************************** Commandes utilisées ************************************/
+
+
+
+Un fichier script est un fichier dans lequel sont écrits des programmes qui seront ensuite exécutés. 
+Un premier script shell tout simple est écrit pour avoir les bases de la création d'un script et 
+comment celui-ci s'exécute.
+
+Pour créer un fichier script qu'on a appelé "master.sh", le plus simple est de le faire avec
+Vim (Vim master.sh). Une fois l'éditeur ouvert, la première chose à faire dans un script est
+d'indiquer quel type de shell est utilisé. Nous allons utilisé la syntaxe de bash qui est le
+répandu sous Linux en écrivant: "#!/bin/bash". Cette expression est à mettre toujours au tout 
+début de chacun des scripts. Cela indique que le programme bash se trouve dans le répertoire /bin.
+
+Pour exécuter un script, il faut commencer par enregistrer le fichier et fermer Vim. Ensuite, il 
+faudra vérifier que le fichier a le droit exécutable avec un "ls -l". Si ce n'est pas le cas, il 
+suffit de faire "chmod +x master.sh". Une fois qu'on a le droit d'exécuter, depuis l'invite de commandes, 
+il suffit de taper "./master.sh".
+
+Les commandes utilisées dans les scripts:
+
+	Pour appeler une variable, il suffit d'appliquer "echo" avec un "$" => par exemple, pour appeler la
+variable master_syscom="HelloEmbeddedLinux", il faudra taper "echo $master_syscom".
+
+	La fonction "read" permet d'inviter un utilisateur à saisir des nombres ou chaînes de caractères
+depuis le terminal. Pour lire un nombre ou un caractère en arguments par l'utilisateur, il faudra les
+appeler par "$nombre" ou "$caractère" (voir master2.sh).
+
+	La commande "wget" permet de télécharger des pages web pour récupérer l'URL de l'image qui nous
+intéresse. Pour extraire la ligne qui contient cet URL, il suffit d'utiliser la commande "grep". Enfin,
+l'image pourra être téléchargée toujours avec la commande "wget" (voir master4.sh).
